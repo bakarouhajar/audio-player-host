@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player Host</title>
+
+    <!-- Importer vos composants depuis Vercel -->
+    <script type="module" src="https://audio-player-playlist.vercel.app/playlist.js"></script>
+    <script type="module" src="https://audio-player-lecteuraudio.vercel.app/lecteuraudio.js"></script>
+    <script type="module" src="https://audio-player-3d-visualisation.vercel.app/3d-visualisation.js"></script>
+    <script type="module" src="https://audio-player-equalizer.vercel.app/equalizer.js"></script>
+    <script type="module" src="https://audio-player-audiovisualizer.vercel.app/audio-visualizer.js"></script>
+    <script type="module" src="https://audio-player-audiovisualizer3d.vercel.app/audio-visualizer-3d.js"></script>
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Audio Player Interface</h2>
+    </header>
+    <main class="grid-container">
+        <section class="left-section">
+            <play-list></play-list>
+            <my-audio-player id="audio-player" src="..."></my-audio-player>
+            <div class="equalizer-container">
+                <my-equalizer id="my-equalizer"></my-equalizer>
+            </div>
+        </section>
+
+        <section class="visualisation-section">
+            <h2>3D Music Visualization</h2>
+            <visualisation-3d></visualisation-3d>
+        </section>
+
+        <section class="visualizers-section">
+            <div class="visualizer-container">
+                <h2>Audio Visualizer</h2>
+                <audio-visualizer></audio-visualizer>
+            </div>
+            <div class="visualizer-container">
+                <h2>3D Audio Visualizer</h2>
+                <audio-visualizer-3d></audio-visualizer-3d>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2024 - Created with ❤️ by Hajar BAKAROU
+    </footer>
+</body>
+</html>
